@@ -264,7 +264,7 @@ header {
 }
 
 .progress-bar-wrapper {
-    flex-basis: 50%; 
+    flex-basis: 40%; 
     height: 10px; 
     background-color: rgba(255, 255, 255, 0.2); 
     border-radius: 3px;
@@ -277,79 +277,4 @@ header {
     background: linear-gradient(to right, white, #1973D1); 
     border-radius: 3px;
     transition: width 0.5s ease-out; 
-}
-
-/* ========================================================================= */
-/* DONUT CHART */
-/* ========================================================================= */
-
-.box-item1-content-donutchart {
-    /* Đảm bảo chart hiển thị ở giữa */
-    flex-basis: 35%; 
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.donut-chart {
-    /* Kích thước của biểu đồ */
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 10px;
-    
-    /* MÀU SẮC DÙNG conic-gradient ĐỂ VẼ PHẦN TRĂM */
-    background: conic-gradient(
-        /* Màu của phần đã đạt (Xanh đậm) */
-        #1973D1  var(--percentage), 
-        /* Màu của phần còn lại (Xám nhạt) */
-        rgba(255, 255, 255, 0.3) var(--percentage) 100% 
-    );
-}
-
-/* Tạo lỗ trống ở giữa để biến nó thành Donut */
-.donut-chart::before {
-    content: '';
-    position: absolute;
-    width: 70px; /* Kích thước lỗ trống */
-    height: 70px;
-    background: inherit; /* Sử dụng màu nền của khối cha (đen hoặc xanh đậm) */
-    border-radius: 50%;
-}
-
-/* Nhãn (Text) ở giữa biểu đồ */
-.chart-label {
-    position: relative;
-    z-index: 1; /* Đảm bảo chữ nằm trên lỗ trống */
-    font-size: 0.9em;
-    font-weight: bold;
-    color: white; 
-}
-
-/* Chữ "Tổng quan" bên dưới biểu đồ */
-.box-item1-content-donutchart p {
-    font-size: 0.8em;
-    color: #cccccc;
-    margin-top: 0;
-}
-
-/* ========================================================================= */
-/* CONTACT ME */
-/* ========================================================================= */
-.contact-me{
-    height: 60vh;
-    background: url("fc278001fbf0f642d270ae065b9d1b73.jpg") no-repeat center/cover;
-}
-
-/* ========================================================================= */
-/* FOOTER */
-/* ========================================================================= */
-footer{
-    height: 8vh;
 }
